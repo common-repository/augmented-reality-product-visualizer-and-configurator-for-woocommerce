@@ -1,0 +1,236 @@
+.ogmo-canvasstyle{
+    aspect-ratio: 3 / 4;
+    width:100%;
+}
+.ogmo-topcontainer{
+    padding-top: 30px;
+}
+.ogmo-iconstyle{
+    width: 24px;
+    height:24px;
+}
+#fullscreenbutton{
+    position:absolute;
+    bottom: 10px;
+    right: 23px;
+    cursor: pointer;
+}
+.ogmo-arbtnstyle{
+    position:absolute;
+    top: 40px;
+    right: 10px;
+    background: #fdfdfd;
+    box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.16);
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    aspect-ratio:1/1;
+    cursor: pointer;
+}
+.ogmo-arbtnstyle:hover{
+    background: #eeeeee;
+}
+.ogmo-arbtnstyle:focus {
+    outline: none;
+}
+.ogmo-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100px;
+    z-index: 1000;
+    display: none;
+}
+
+.ogmo-popupdiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ogmo-container {
+    display: flex;
+    width: 75vw;
+    border-radius: 30px;
+    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 16%);
+}
+
+.ogmo-box1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.ogmo-logo {
+    width: 100px;
+    height: 24px;
+}
+
+.ogmo-qrimgdiv {
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ogmo-artext {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.ogmo-box2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background: #344b7e;
+    padding: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.ogmo-closebtn {
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.ogmo-closebtn:focus {
+    outline: none;
+}
+
+.ogmo-closeIcon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
+    color: white;
+}
+
+.ogmo-textDiv {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ogmo-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight:600;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.ogmo-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.ogmo-active {
+    display: block;
+}
+
+.ogmo-tooltipstyle {
+    position: absolute;
+    top: 5px;
+    right: -8px;
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    background: #303030;
+    border: none;
+    border-radius: 5px;
+    text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+}
+
+.ogmo-tooltipstyle::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #303030 transparent transparent transparent;
+  }
+
+.ogmo-fade-out {
+    animation: fadeOut ease 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+@media only screen and (min-width: 768px) {
+    .ogmo-container {
+        width: 45vw;
+    }
+
+    .ogmo-box1 {
+        padding: 20px 20px 30px;
+    }
+
+    .ogmo-box2 {
+        padding: 20px 20px 30px;
+    }
+
+    .ogmo-title {
+        font-size: 18px;
+        font-weight:700;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .ogmo-container {
+        width: 50vw;
+    }
+
+    .ogmo-box1 {
+        padding: 30px;
+    }
+
+    .ogmo-box2 {
+        padding: 30px;
+    }
+
+    .ogmo-title {
+        font-size: 20px;
+        font-weight:700;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .ogmo-container {
+        width: 40vw;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .ogmo-container {
+        width: 30vw;
+    }
+}

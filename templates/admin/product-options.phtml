@@ -1,0 +1,85 @@
+<div id="shipping_costs_product_data" class="panel woocommerce_options_panel" style="font-size:12px;">
+
+    <div id="ogmo-options-main-container">
+        <div id="ogmo-options-main-heading"><b>Add your 3D Model</b></div>
+        <div class="ogmo-select-view-container">
+            <select id="ogmo-select-view" name="ogmo-select-view" onchange="chooseView()">
+                <option value="upload"><b>Upload as a GLB</b></option>
+                <option value="choose" selected><b>Select Design</b></option>
+            </select>
+        </div>
+        <p id="ogmo-upload-error">Error uploading GLB. Please try again</p>
+        <div id="ogmo-infoDivOther">
+            <p class="ogmo-options-description">
+                Please upload a GLB of your 3D model. 
+                A Design will be created in your OGMO Portal account under same file name once your GLB upload is completed. 
+                You can edit the design name thereafter. <br>
+                Learn more about OGMO Designs in <a style="text-decoration:none;" href="<?php echo OGMO_DOCS_URL; ?>" target="_blank"> OGMO Knowledge Hub.</a>
+            </p>
+
+            <div class="ogmo-dashed-box-container">        
+                <div id="ogmo-dashed-box" class="ogmo-spaced-border">
+                        <div id="ogmo-upload-progress">
+                            <div style="display:flex; align-items:center; font-weight:bolder;">
+                                    <span id="ogmo-display_design_name"> </span>
+                            </div>
+                            <div id="ogmo-replace_error_div">
+                                    <span id="ogmo-replace_error_text"></span>
+                                    <button type="button" class="button-link upload-dismiss-errors"></button>
+                            </div>
+                            <div id="ogmo-progressbar-box">
+                                    <div id="ogmo-uploadProgressBar"> </div>
+                            </div>
+                        </div>
+                        <div id="file-upload">
+                            <div style="display:flex; justify-content: center;">
+                                    <span style="font-weight:600; font-size:14px;"> Drag and Drop a GLB or </span>
+                            </div>
+                            <div style="display:flex; justify-content: center; margin-top:14px">
+                                    <button id="ogmo-browse-file" type="button" onclick="document.getElementById('ogmo-designGlbFile').click();" >
+                                    <span style="padding:12px; font-size:16px; font-weight:600;">Browse</span>
+                                    </button>
+                                    <input type="file" id="ogmo-designGlbFile" accept=".glb" />
+                                </div>
+                                <div id="ogmo-upload_error_div">
+                                    <span id="ogmo-upload_error_text"></span>
+                                    <button onclick="close_error()" class="ogmo-close_error_msg" type="button">&#10006;</button>
+                                </div>
+                                <span class="ogmo-max-upload-size">(Maximum upload file size: 50 MB)</span>
+                        </div>
+                </div>
+                <button id="ogmo-replace_glb" type="button" onclick="document.getElementById('ogmo-designGlbFile').click();">
+                        Replace GLB
+                </button>
+                <input type="file" id="ogmo-designGlbFile" accept=".glb" />
+            </div>
+        </div>
+
+        <div id="ogmo-info_div">
+        <label id="ogmo-select-label">Select a Design</label>
+                <?php
+                        woocommerce_wp_select( array(
+                                'id'                => '_select_field',
+                                'desc_tip'      => false,
+                                'options'       => array( '' => __('No design.....') ),
+                                'class'         => 'js-states form-control select-styles',
+                                'wrapper_class' => 'design_selector_wrapper'
+                        ) );
+                ?>
+        </div>     
+
+        <div id="ogmoReactApp"></div>
+        <div class="ogmo-option-buttons">
+            <a id="ogmo-edit-in-3d" onclick="setProductPage()" href="#" target="_blank">
+                <button id="ogmo-editin3D-btn" type="button">
+                    <img src="<?php echo get_ogmo()->plugin_url() . '/assets/images/edit_in_3d.png' ?>"/> 
+                    <span style="margin-left:10px;">Edit in 3D Editor</span>
+                </button>
+            </a>
+            <button type="button" id="ogmo-designUnlink" onclick="productDesignUnlink()">
+                <img class="ogmo-unlink-icon" src="<?php echo get_ogmo()->plugin_url() . '/assets/images/unlink_icon.png' ?>"/> 
+                <span style="margin-left:10px;">Unlink</span>
+            </button>
+        </div>
+    </div>
+</div>

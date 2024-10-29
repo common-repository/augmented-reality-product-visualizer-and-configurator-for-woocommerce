@@ -1,0 +1,217 @@
+#ogmo-select-label{
+    margin:0;
+}
+.select2-container--open {
+    z-index: 165688256;
+}
+.design_selector_wrapper.form-field._select_field_field{
+    padding:0 !important;
+    width: 20vw;
+}
+.ogmo-spaced-border {
+    background-image: linear-gradient(to right, grey 50%, rgba(255, 255, 255, 0) 0%), 
+                    linear-gradient(grey 50%, rgba(255, 255, 255, 0) 0%), 
+                    linear-gradient(to right, grey 50%, rgba(255, 255, 255, 0) 0%), 
+                    linear-gradient(grey 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: top, right, bottom, left;
+    background-size: 10px 1px, 1px 10px;
+    background-repeat: repeat-x, repeat-y;
+}
+#ogmo-upload_error_div,#ogmo-replace_error_div {
+    position:relative;
+    display:none;
+    background-color:#F9C9CA;
+    text-align:center;
+    border-left: 4px solid #d63638;
+    margin:10px 0px;
+    padding:5px;
+}
+#ogmo-upload_error_div{
+    width:16vw;
+}
+#ogmo-upload_error_text,#ogmo-close_error_msg{
+    color:black;
+}
+.ogmo-close_error_msg{
+    cursor:pointer;
+    border-radius: 50%;
+    border: none;
+    position:absolute;
+    top:0;
+    right:0;
+    font-size: 9px;
+    width: 18px;
+}
+#ogmo-infoDivOther{
+    display:none; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items:center; 
+    width:32vw !important;
+}
+#ogmo-info_div{
+    display:block; 
+    flex-direction: column; 
+    align-items:flex-start;
+}
+#ogmo-options-main-container{
+    display: flex; 
+    flex-direction: column; 
+    margin-left:2%;
+}
+#ogmo-options-main-heading{
+    display:flex; 
+    margin-top: 10px; 
+    font-size:16px;
+}
+.ogmo-select-view-container{
+    display:flex;
+}
+#ogmo-select-view{
+    margin:25px 0px; 
+    width:24vw;
+}
+.ogmo-options-description{
+    text-align: justify; 
+    padding:0px; 
+    margin-bottom:25px; 
+    margin-top:0px;
+}
+.ogmo-dashed-box-container{
+    display:flex; 
+    flex-direction:row; 
+    align-items:center;
+    margin-top:15px;
+}
+#ogmo-dashed-box{
+    display:flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items:center; 
+    border-radius:6px; 
+    width:100%; 
+    height:27vh; 
+}
+#ogmo-upload-progress{
+    display:none; 
+    flex-direction: column; 
+    width:75%;
+}
+#ogmo-display_design_name{
+    padding-bottom:2%;
+}
+#ogmo-uploadProgressBar{
+    display:none; 
+    border:1px solid blue; 
+    height:8px;
+}
+#ogmo-progressbar-box{
+    display:none; 
+    background-color:#C4C4C4; 
+    border: 1px solid black; 
+    height:10px;
+}
+.ogmo-max-upload-size{
+    display:block;
+    font-size:12px;
+    font-weight:400;
+    margin-top:5px;
+    text-align:center;
+}
+#ogmo-replace_glb{
+    display:none; 
+    justify-content:center; 
+    align-items:center; 
+    margin-left:3%; 
+    height:35px; 
+    width:110px; 
+    border-radius:4px; 
+    background-color:#1D4C92; 
+    color:white; 
+    border:none; 
+    font-size:14px; 
+    cursor:pointer;
+}
+#ogmo-browse-file{
+    color:white; 
+    background-color:#1D4C92; 
+    border-radius:4px; 
+    border:none; 
+    cursor:pointer; 
+    width:135px; 
+    height:35px;
+}
+#ogmoReactApp{
+    width:32vw; 
+    height:27vh; 
+    border:1px solid #EEEEEE; 
+    margin-top:30px;
+}
+#ogmo-edit-in-3d{
+    text-decoration:none;
+    display:none;
+    width:180px;
+}
+#ogmo-editin3D-btn{
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    width:180px; 
+    height:35px; 
+    background-color:#3D6ACF; 
+    color:white;
+    border:#3D6ACF; 
+    border-radius:4px;
+    padding:8px;
+    cursor:pointer; 
+    margin-left:8px;
+}
+.ogmo-unlink-icon{
+    width:22px;
+    height:auto;
+}
+.ogmo-option-buttons{
+    display:flex;
+    margin-top:25px; 
+    font-size:16px; 
+    font-weight:550;
+    margin-bottom:50px;
+}
+#ogmo-designUnlink{
+    display:none; 
+    justify-content:center; 
+    align-items:center; 
+    width:172px; 
+    height:35px; 
+    background-color:#3D6ACF; 
+    color:white;
+    border:#3D6ACF; 
+    border-radius:4px;
+    padding:8px;
+    cursor:pointer; 
+    margin-left:3%;
+}
+#ogmo-designUnlink:disabled{
+    background-color:gray; 
+    border:gray; 
+    cursor:not-allowed;
+}
+#ogmo-designGlbFile{
+    display:none;
+}
+#ogmo-upload-error{
+    display: none;
+    font-weight:bold;
+    color:red;
+    font-size:13px;
+}
+@media screen and (max-width: 930px) {
+    #ogmo-infoDivOther, #ogmoReactApp {
+        width: 37vw !important;
+    }
+}
+@media screen and (max-width: 730px) {
+    #ogmo-select-view, #ogmo-infoDivOther, #ogmoReactApp {
+        width: 55vw !important;
+    }
+}
